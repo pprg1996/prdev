@@ -1,7 +1,24 @@
 $tint: rgba(0, 0, 0, 0.5);
+$lightGray:#848484;
+$darkGray:#191618;
+$red:#e82929;
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
 
 body{
+  background-color: $darkGray;
   font-family: "Montserrat";
+  color: #848484;
 }
 
 #hero{
@@ -15,16 +32,47 @@ body{
   align-items: center;
 
   h1{
-    color: #e82929;
+    color: $red;
     font-size: 5rem;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    margin: 0;
   }
 
   h2{
-    color: #848484;
+    color: $lightGray;
   }
 }
 
 #projects{
   min-height: 100vh;
+  // padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0;
+
+  .projectDiv{
+    max-width: 1000px;
+  }
+
+  .projectDiv:not(:last-child){
+    margin-bottom: 50px;
+  }
+
+  .projectImgDiv{
+    // margin: 0 20px 20px 20px;
+  }
+
+  .projectImg{
+    width: 100%;
+    display: block;
+  }
+
+  .projectDescription{
+    text-align: center;
+    background-color: $red;
+    padding: 20px 0;
+    color: $darkGray;
+    font-weight: 600;
+  }
 }
