@@ -1,7 +1,7 @@
 $tint: rgba(0, 0, 0, 0.5);
-$lightGray:#848484;
-$darkGray:#191618;
-$red:#e82929;
+$lightGray: #848484;
+$darkGray: #191618;
+$red: #e82929;
 
 html {
   -webkit-box-sizing: border-box;
@@ -9,20 +9,22 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
-  }
-
-body{
-  background-color: $darkGray;
-  font-family: "Montserrat";
-  color: #848484;
 }
 
-#hero{
-  background-image: linear-gradient($tint,$tint),url(./assets/img/hero.jpg);
+body {
+  background-color: $darkGray;
+  font-family: "Montserrat";
+  color: $lightGray;
+}
+
+#hero {
+  background-image: linear-gradient($tint, $tint), url(./assets/img/hero.jpg);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -31,48 +33,89 @@ body{
   justify-content: center;
   align-items: center;
 
-  h1{
+  h1 {
     color: $red;
     font-size: 5rem;
-    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
     margin: 0;
   }
 
-  h2{
+  h2 {
     color: $lightGray;
   }
 }
 
-#projects{
+#projects {
   min-height: 100vh;
-  // padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 50px 0;
 
-  .projectDiv{
+  .projectDiv {
     max-width: 1000px;
+
+    .projectImgDiv {
+      position: relative;
+
+      .projectImg {
+        width: 100%;
+        display: block;
+      }
+
+      .projectImgHoverDiv {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($darkGray, 0.9);
+        opacity: 0;
+        transition: all 0.2s;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .projectLink {
+          color: inherit;
+        }
+
+        .vertLine {
+          width: 1px;
+          height: 90%;
+          background-color: rgba($lightGray, 0.6);
+          position: absolute;
+        }
+
+        .projectHoverIcon {
+          font-size: 2rem;
+        }
+      }
+
+      .projectImgHoverDiv:hover {
+        opacity: 1;
+      }
+    }
+
+    .projectDescription {
+      text-align: center;
+      background-color: $red;
+      padding: 20px 20px;
+      color: $darkGray;
+      font-weight: 600;
+      text-transform: capitalize;
+      line-height: 22px;
+    }
   }
 
-  .projectDiv:not(:last-child){
+  .projectDiv:not(:last-child) {
     margin-bottom: 50px;
   }
+}
 
-  .projectImgDiv{
-    // margin: 0 20px 20px 20px;
-  }
-
-  .projectImg{
-    width: 100%;
-    display: block;
-  }
-
-  .projectDescription{
-    text-align: center;
-    background-color: $red;
-    padding: 20px 0;
-    color: $darkGray;
-    font-weight: 600;
-  }
+#contact {
+  min-height: 100vh;
+  background-image: url("./assets/img/canyon.jpg");
+  background-size: cover;
+  background-position: center;
 }

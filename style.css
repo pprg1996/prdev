@@ -4,7 +4,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
@@ -46,19 +48,59 @@ body {
 #projects .projectDiv {
   max-width: 1000px;
 }
-#projects .projectDiv:not(:last-child) {
-  margin-bottom: 50px;
+#projects .projectDiv .projectImgDiv {
+  position: relative;
 }
-#projects .projectImg {
+#projects .projectDiv .projectImgDiv .projectImg {
   width: 100%;
   display: block;
 }
-#projects .projectDescription {
+#projects .projectDiv .projectImgDiv .projectImgHoverDiv {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 22, 24, 0.9);
+  opacity: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#projects .projectDiv .projectImgDiv .projectImgHoverDiv .projectLink {
+  color: inherit;
+}
+#projects .projectDiv .projectImgDiv .projectImgHoverDiv .vertLine {
+  width: 1px;
+  height: 90%;
+  background-color: rgba(132, 132, 132, 0.6);
+  position: absolute;
+}
+#projects .projectDiv .projectImgDiv .projectImgHoverDiv .projectHoverIcon {
+  font-size: 2rem;
+}
+#projects .projectDiv .projectImgDiv .projectImgHoverDiv:hover {
+  opacity: 1;
+}
+#projects .projectDiv .projectDescription {
   text-align: center;
   background-color: #e82929;
-  padding: 20px 0;
+  padding: 20px 20px;
   color: #191618;
   font-weight: 600;
+  text-transform: capitalize;
+  line-height: 22px;
+}
+#projects .projectDiv:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+#contact {
+  min-height: 100vh;
+  background-image: url("./assets/img/canyon.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */
