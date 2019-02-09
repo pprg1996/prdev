@@ -32,17 +32,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  h1 {
-    color: $red;
-    font-size: 5rem;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
-    margin: 0;
-  }
+.heroHeader {
+  color: $red;
+  font-size: 5rem;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
 
-  h2 {
-    color: $lightGray;
-    font-size: 1.2rem;
+.heroMessage {
+  color: $lightGray;
+  font-size: 1.2rem;
+  font-weight: 300;
+  span {
+    font-weight: 700;
   }
 }
 
@@ -51,103 +55,109 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 0;
+  padding: 50px 15px;
+  align-items: center;
+}
 
-  .projectDiv {
-    max-width: 1000px;
+.sectionHeader {
+  margin: 0px 0 30px 0;
+}
 
-    .projectImgDiv {
-      position: relative;
+.projectDiv {
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-      .projectImg {
-        width: 100%;
-        display: block;
-      }
+.projectDiv:not(:last-child) {
+  margin-bottom: 50px;
+}
 
-      .projectImgHoverDiv {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($darkGray, 0.9);
-        opacity: 0;
-        transition: all 0.2s;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+.projectImgDiv {
+  position: relative;
+}
 
-        .projectLink {
-          color: inherit;
-        }
+.projectImg {
+  width: 100%;
+  display: block;
+}
 
-        .vertLine {
-          width: 1px;
-          height: 90%;
-          background-color: rgba($lightGray, 0.6);
-          position: absolute;
-        }
+.projectImgHoverDiv {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($darkGray, 0.9);
+  opacity: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-        .projectHoverIcon {
-          font-size: 2rem;
-        }
-      }
+.projectImgHoverDiv:hover {
+  opacity: 1;
+}
 
-      .projectImgHoverDiv:hover {
-        opacity: 1;
-      }
-    }
+.projectLink {
+  color: inherit;
+}
 
-    .projectDescription {
-      text-align: center;
-      background-color: $red;
-      padding: 20px 20px;
-      color: $darkGray;
-      font-weight: 600;
-      text-transform: capitalize;
-      line-height: 22px;
-    }
-  }
+.vertLine {
+  width: 1px;
+  height: 90%;
+  background-color: rgba($lightGray, 0.6);
+  position: absolute;
+}
 
-  .projectDiv:not(:last-child) {
-    margin-bottom: 50px;
-  }
+.projectHoverIcon {
+  font-size: 2rem;
+}
+
+.projectDescription {
+  text-align: center;
+  background-color: $red;
+  padding: 20px 20px;
+  color: $darkGray;
+  text-transform: capitalize;
+  line-height: 22px;
 }
 
 #contact {
   min-height: 100vh;
-  background-image: url("./assets/img/canyon.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url("./assets/img/redPebbles.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
 
-  .contactCard {
-    background-color: #e82929;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #f8c1b7;
-    justify-content: space-around;
-    border-radius: 10px;
-    padding: 15px 0;
-    width: 200px;
-    height: 120px;
-  }
+.contactCard {
+  background-color: #e82929;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f8c1b7;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 15px 0;
+  width: 200px;
+  height: 120px;
+}
 
-  .contactIcon {
-    margin-bottom: 10px;
-  }
+.contactIcon {
+  margin-bottom: 10px;
+}
 
-  .contactType {
-    margin-bottom: 10px;
-  }
+.contactType {
+  margin-bottom: 10px;
+}
 
-  hr {
-    width: 80%;
-    margin: 0;
-    margin-bottom: 10px;
-  }
+hr {
+  width: 80%;
+  margin: 0;
+  margin-bottom: 10px;
 }
