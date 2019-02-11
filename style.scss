@@ -45,6 +45,7 @@ body {
   color: $lightGray;
   font-size: 1.2rem;
   font-weight: 300;
+  text-align: center;
   span {
     font-weight: 700;
   }
@@ -61,12 +62,18 @@ body {
 
 .sectionHeader {
   margin: 0px 0 30px 0;
+  font-family: "Roboto Slab";
+  font-weight: normal;
+  font-size: 2.1rem;
+  text-transform: uppercase;
 }
 
 .projectDiv {
   max-width: 900px;
   border-radius: 10px;
   overflow: hidden;
+  border: solid #00000036 10px;
+  border-style: double;
 }
 
 .projectDiv:not(:last-child) {
@@ -75,6 +82,17 @@ body {
 
 .projectImgDiv {
   position: relative;
+}
+
+.projectMenuButton {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  z-index: 1;
+  font-size: 2rem;
+  color: inherit;
+  // background-color: rgba($darkGray, 0.9);
+  padding: 5px 10px;
 }
 
 .projectImg {
@@ -91,13 +109,17 @@ body {
   background-color: rgba($darkGray, 0.9);
   opacity: 0;
   transition: all 0.2s;
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
 }
 
-.projectImgHoverDiv:hover {
+.projectImgHoverDiv.show {
   opacity: 1;
+}
+
+.projectImgHoverDiv.showDisplay {
+  display: flex;
 }
 
 .projectLink {
@@ -118,10 +140,12 @@ body {
 .projectDescription {
   text-align: center;
   background-color: $red;
-  padding: 20px 20px;
+  padding: 10px;
   color: $darkGray;
   text-transform: capitalize;
-  line-height: 22px;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 #contact {
@@ -136,7 +160,7 @@ body {
 }
 
 .contactCard {
-  background-color: #e82929;
+  background-color: #1a0606ab;
   display: flex;
   flex-direction: column;
   align-items: center;
