@@ -24,7 +24,7 @@ body {
 }
 
 #hero {
-  background-image: linear-gradient($tint, $tint), url(./assets/img/hero.jpg);
+  background-image: linear-gradient($tint, $tint), url("./assets/img/hero.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -55,9 +55,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  // flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 15px;
   align-items: center;
+  padding: 50px 15px;
 }
 
 .sectionHeader {
@@ -69,7 +70,7 @@ body {
 }
 
 .projectDiv {
-  max-width: 900px;
+  max-width: 600px;
   border-radius: 10px;
   overflow: hidden;
   border: solid #00000036 10px;
@@ -86,13 +87,13 @@ body {
 
 .projectMenuButton {
   position: absolute;
-  top: 35px;
-  left: 35px;
+  top: 10px;
+  left: 15px;
   z-index: 1;
   font-size: 2rem;
   color: inherit;
   // background-color: rgba($darkGray, 0.9);
-  padding: 5px 10px;
+  // padding: 5px 10px;
 }
 
 .projectImg {
