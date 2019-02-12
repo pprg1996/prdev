@@ -1,7 +1,7 @@
-document.querySelector('#projects > div:nth-child(2) > div.projectImgDiv > a').addEventListener("click", e => {
+document.querySelector(".projectMenuButton").addEventListener("click", e => {
   e.preventDefault();
-  const hoverMenu = document.querySelector('#projects > div:nth-child(2) > div.projectImgDiv > div');
-  const buttonIcon = document.querySelector('#projects > div:nth-child(2) > div.projectImgDiv > a > i');
+  const hoverMenu = document.querySelector(".projectImgHoverDiv");
+  const buttonIcon = document.querySelector(".projectMenuButtonIcon");
 
   if (!hoverMenu.classList.contains("show")) {
     buttonIcon.classList.replace("fa-bars", "fa-window-close");

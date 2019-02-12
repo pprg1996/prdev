@@ -2,6 +2,7 @@ $tint: rgba(0, 0, 0, 0.5);
 $lightGray: #848484;
 $darkGray: #191618;
 $red: #e82929;
+$gutter: 20px;
 
 html {
   -webkit-box-sizing: border-box;
@@ -61,6 +62,14 @@ body {
   padding: 50px 15px;
 }
 
+.projectsWrapper {
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .sectionHeader {
   margin: 0px 0 30px 0;
   font-family: "Roboto Slab";
@@ -75,6 +84,32 @@ body {
   overflow: hidden;
   border: solid #00000036 10px;
   border-style: double;
+}
+
+@media screen and (min-width: 768px) {
+  .projectDiv {
+    width: 320px;
+  }
+
+  .projectDiv:nth-child(1) {
+    margin-right: $gutter;
+  }
+
+  .projectDiv:nth-child(2) {
+    margin-left: $gutter;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .projectDiv {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projectDiv {
+    width: 500px;
+  }
 }
 
 .projectDiv:not(:last-child) {

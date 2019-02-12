@@ -55,6 +55,13 @@ body {
   padding: 50px 15px;
 }
 
+.projectsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .sectionHeader {
   margin: 0px 0 30px 0;
   font-family: "Roboto Slab";
@@ -71,6 +78,29 @@ body {
   border-style: double;
 }
 
+@media screen and (min-width: 768px) {
+  .projectDiv {
+    width: 320px;
+  }
+
+  .projectDiv:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  .projectDiv:nth-child(2) {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 940px) {
+  .projectDiv {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projectDiv {
+    width: 500px;
+  }
+}
 .projectDiv:not(:last-child) {
   margin-bottom: 50px;
 }
