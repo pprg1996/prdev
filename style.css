@@ -47,7 +47,6 @@ body {
 }
 
 #projects {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +70,6 @@ body {
 }
 
 .projectDiv {
-  max-width: 600px;
   border-radius: 10px;
   overflow: hidden;
   border: solid #00000036 10px;
@@ -80,7 +78,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .projectDiv {
-    width: 320px;
+    width: 40%;
   }
 
   .projectDiv:nth-child(1) {
@@ -89,16 +87,6 @@ body {
 
   .projectDiv:nth-child(2) {
     margin-left: 20px;
-  }
-}
-@media screen and (min-width: 940px) {
-  .projectDiv {
-    width: 400px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .projectDiv {
-    width: 500px;
   }
 }
 .projectDiv:not(:last-child) {
@@ -182,6 +170,10 @@ body {
   padding: 50px 0;
 }
 
+.contactHeader {
+  color: #f8c1b7;
+}
+
 .contactCard {
   background-color: #1a0606ab;
   display: flex;
@@ -194,8 +186,8 @@ body {
   width: 80%;
 }
 
-.contactCard:first-child {
-  margin-bottom: 5%;
+.contactCard:first-of-type {
+  margin-bottom: 50px;
 }
 
 .contactIcon {
