@@ -172,7 +172,6 @@ body {
 }
 
 #contact {
-  min-height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), black), url("./assets/img/redPebbles.jpg");
   background-size: cover;
   background-position: center;
@@ -180,6 +179,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  padding: 50px 0;
 }
 
 .contactCard {
@@ -190,13 +190,17 @@ body {
   color: #f8c1b7;
   justify-content: space-around;
   border-radius: 10px;
-  padding: 15px 0;
-  width: 200px;
-  height: 120px;
+  padding: 30px 0;
+  width: 80%;
+}
+
+.contactCard:first-child {
+  margin-bottom: 5%;
 }
 
 .contactIcon {
   margin-bottom: 10px;
+  font-size: 3rem;
 }
 
 .contactType {
